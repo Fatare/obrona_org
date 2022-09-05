@@ -9,8 +9,16 @@
                 </div>
 
                 <div class="field input-field">
-                    <input type="password" placeholder="Password" class="password">
-                    <i [ngClass]="test()"></i>
+                    <input [type]="isClicked == false ? 'text' : 'password' "
+                           placeholder="Password" 
+                           class="password"> 
+
+                    <i class="eye-icon fas"
+                       type="button"
+                       (click)="isClicked = !isClicked"
+                       [class.fa-eye]="!isClicked"
+                       [class.fa-eye-slash]="isClicked">
+                    </i>
                 </div>
 
                 <div class="two-col-grid">
