@@ -1,13 +1,5 @@
-<html>
-    <Head>
-        <link rel="stylesheet" href="login.component.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="https://kit.fontawesome.com/19df4d69fd.js" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
-    </Head>
-<body>
 <section class="container forms">
-    <div class="form login">
+    <div class="form-login">
         <div class="form-content">
             <header>Login</header>
 
@@ -18,7 +10,7 @@
 
                 <div class="field input-field">
                     <input type="password" placeholder="Password" class="password">
-                    <i class="fas fa-eye-slash eye-icon"></i>
+                    <i [ngClass]="test()"></i>
                 </div>
 
                 <div class="two-col-grid">
@@ -37,13 +29,10 @@
                 </div>
 
                 <div class="form-link">
-                    <span>Don't have an account? <a href="signup.component.html" class="link signup-link">Sign Up</a></span>
+                    <span>Don't have an account? <a routerLink="../Signup" class="link signup-link">Sign Up</a></span>
                 </div>
                 
             </form>
         </div>
     </div>
 </section>
-<script src="main.js"></script>
-</body>
-</html>

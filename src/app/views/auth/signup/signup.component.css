@@ -1,0 +1,191 @@
+
+.container{
+height: 100vh;
+width: 100%;
+display: flex;
+align-items: center;
+justify-content: center;
+background-color: rgba(185, 182, 182, 0.699);
+}
+
+.form{
+    position: absolute;
+    max-width: 430px;
+    width: 100%;
+    padding: 30px;
+    border-radius: 15px; 
+}
+
+
+.form.signup{
+    opacity: 0;
+    pointer-events: none;
+}
+
+.form.show-signup .form.signup{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.form.show-signup .form.login{
+    opacity: 0;
+    pointer-events: none;
+}
+
+header{
+    font-size: 28px;
+    font-weight: 600;
+    color: rgb(73, 76, 92);
+    text-align: center;
+}
+
+form{
+    margin-top: 30px;
+}
+
+form .field{
+    position: relative;
+    height: 50px;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.field input{
+    outline: none;
+    padding: 0 15px;
+    border: 1px solid#7c7373;
+}
+
+.field input:focus{
+    border-bottom-width: 2px;
+}
+
+.field input:hover{
+    background-color: #ffffff7a;
+}
+
+.eye-icon{
+    position: absolute; 
+    top:50%;
+    right: 10px;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color:#CACACA;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.field button{
+    color: #fff;
+    background-color: #83acfa;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.field button:hover{
+    background-color: #9fd4f7;
+}
+
+.field input,
+.field button{
+    height: 50;
+    width: 100%;
+    border: none;
+    font-size: 17px;
+    font-weight: 400;
+    border-radius: 40px;
+
+}
+.field input{
+    padding: 0 15px;
+    background: rgba(255, 255, 255, 0.295);
+    border: 1px solid transparent;
+}
+
+
+.form-link{
+    text-align: right;
+    margin-top: 10px;
+    margin-top: 3px;
+}
+
+.form-link span,
+.form-link a{
+    font-size: 14px;
+    font-weight: 400;
+    color: rgb(92, 89, 104);
+}
+
+.form a{
+    color: rgb(28, 155, 206);
+    text-decoration: none;
+}
+
+.form a:hover{
+    text-decoration: underline;
+}
+
+.two-col-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+   
+    
+}
+
+.checkbox-wrap {
+    display: block;
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; }
+  
+  /* Hide the browser's default checkbox */
+  .checkbox-wrap input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0; }
+  
+  /* Create a custom checkbox */
+  .checkmark {
+    position:absolute;
+    top: 0;
+    left: 0; }
+  
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark:after {
+    content: "\f0c8";
+    font-family: "FontAwesome";
+    color: rgba(22, 103, 141, 0.1);
+    font-size: 20px;
+    margin-top: 0px;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s; }
+
+  /* Show the checkmark when checked */
+  .checkbox-wrap input:checked ~ .checkmark:after {
+    display: block;
+    content: "\f14a";
+    font-family: "FontAwesome";
+    color: rgba(191, 252, 50, 0.2); }
+  
+  /* Style the checkmark/indicator */
+  .checkbox-primary {
+    color: rgb(92, 89, 104); }
+    .checkbox-primary input:checked ~ .checkmark:after {
+      color: rgb(92, 89, 104); }
+
+@media screen and(max-width: 400xp) {
+    .form{
+        padding: 15px 10px;
+    }
+}
