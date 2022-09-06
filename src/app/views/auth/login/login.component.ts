@@ -7,13 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  public isClicked: boolean = false;
+  public isClicked: boolean = true;
   constructor() { }
 
   ngOnInit(): void {
-  }
-  public test(){
-    return 'fas fa-eye-slash eye-icon';
   }
 
 }
