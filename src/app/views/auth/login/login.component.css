@@ -11,7 +11,7 @@ background-color: rgba(185, 182, 182, 0.699);
 
 .form{
     position: absolute;
-    max-width: 430px;
+    max-width: 330px;
     width: 100%;
     padding: 30px;
     border-radius: 15px; 
@@ -57,6 +57,7 @@ form .field{
     padding: 0 15px;
     border: 1px solid#7c7373;
     font-family: "Poppins";
+    width: 90% !important;
 }
 
 .field input:focus{
@@ -71,11 +72,10 @@ form .field{
     position: absolute; 
     top:50%;
     right: 10px;
-    transform: translateY(-50%);
+    transform: translateY(-110%);
     font-size: 18px;
     color:#CACACA;
     cursor: pointer;
-    padding: 5px;
 }
 
 .field button{
@@ -92,7 +92,6 @@ form .field{
 
 .field input,
 .field button{
-    height: 50;
     width: 100%;
     border: none;
     font-size: 17px;
@@ -101,7 +100,7 @@ form .field{
 
 }
 .field input{
-    padding: 0 15px;
+    /* padding: 0 15px; */
     background: rgba(255, 255, 255, 0.295);
     border: 1px solid transparent;
 }
@@ -109,8 +108,8 @@ form .field{
 
 .form-link{
     text-align: right;
-    margin-top: 10px;
-    margin-top: 3px;
+    margin-top: 0px;
+
 }
 
 .form-link span,
