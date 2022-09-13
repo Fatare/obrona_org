@@ -5,19 +5,19 @@
 
             <form action="#">
                 <div class="field input-field">
-                    <input type="email" placeholder="Email" class="input">
+                    <input type="email" placeholder="Email" class="input" required>
                 </div>
                 <div class="field input-field">
-                    <input type="name" placeholder="Name" class="input">
+                    <input type="name" placeholder="Name" class="input" required>
                 </div>
                 <div class="field input-field">
-                    <input type="surname" placeholder="Surname" class="input">
+                    <input type="surname" placeholder="Surname" class="input" required>
                 </div>
                 
                     <div class="field input-field">
                         <input [type]="isClicked == false ? 'text' : 'password' "
                                placeholder="Password" 
-                               class="password"> 
+                               class="password" required> 
     
                         <i class="eye-icon fas"
                            type="button"
