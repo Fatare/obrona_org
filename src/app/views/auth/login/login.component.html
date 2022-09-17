@@ -4,14 +4,15 @@
         <div class="form-content">
             <header>Login</header>
 
-            <form action="#">
+            <form #myForm="ngForm" (ngSubmit)="onSubmit()" action="#">
                 <div class="field input-field">
-                    <input type="email" placeholder="Email" class="input">
+                    <input type="email" formControlName="email" placeholder="Email" class="input">
                 </div>
 
                 <div class="field input-field">
                     <input [type]="isClicked == false ? 'text' : 'password' "
-                           placeholder="Password" 
+                           formControlName="password"
+                           laceholder="Password" 
                            class="password"> 
 
                     <i class="eye-icon fas"
@@ -34,7 +35,7 @@
                 </div>
 
                 <div class="field btn-field">
-                    <button>LOGIN</button>
+                    <button [disabled]="!myForm.valid" >LOGIN</button>
                 </div>
 
                 <div class="form-link">

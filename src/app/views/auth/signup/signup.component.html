@@ -3,19 +3,19 @@
         <div class="form-content">
             <header>Sign Up</header>
 
-            <form action="#">
+            <form #myForm="ngForm" (ngSubmit)="onSubmit()" action="#">
                 <div class="field input-field">
-                    <input type="email" placeholder="Email" class="input" required>
+                    <input type="email" formControlName="email" placeholder="Email" class="input" required>
                 </div>
                 <div class="field input-field">
-                    <input type="name" placeholder="Name" class="input" required>
+                    <input type="name" formControlName="name" placeholder="Name" class="input" required>
                 </div>
                 <div class="field input-field">
-                    <input type="surname" placeholder="Surname" class="input" required>
+                    <input type="surname" formControlName="surname" placeholder="Surname" class="input" required>
                 </div>
                 
                     <div class="field input-field">
-                        <input [type]="isClicked == false ? 'text' : 'password' "
+                        <input [type]="isClicked == false ? 'text' : 'password' " formControlName="password"
                                placeholder="Password" 
                                class="password" required> 
     
@@ -27,7 +27,7 @@
                         </i>
                     </div>
                     <div class="field btn-field">
-                        <button>SIGN UP</button>
+                        <button type="signup" [disabled]="!myForm.valid" >SIGN UP</button>
                     </div>
                     <div class="form-link">
                         <span>Have already an account? <a routerLink="../Login" class="link login-link">Log In</a></span>
