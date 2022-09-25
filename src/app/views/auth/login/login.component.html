@@ -4,7 +4,7 @@
         <div class="form-content">
             <header>Login</header>
 
-            <form #myForm="ngForm" (ngSubmit)="onSubmit()" action="#">
+            <form #myForm="ngForm" [formGroup]="form" (ngSubmit)="onSubmit()" action="#">
                 <div class="field input-field">
                     <input type="email" formControlName="email" placeholder="Email" class="input">
                 </div>
