@@ -24,7 +24,7 @@ export class LoginComponent implements OnInit {
   });
 
   onSubmit() {
-    console.log("reactive forn subitted");
+    console.log("reactive form subitted");
     console.log(this.form);
   }
 
