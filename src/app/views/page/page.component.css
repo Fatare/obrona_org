@@ -1,0 +1,83 @@
+body {
+    line-height: 1.8;
+    color: #898fa1;
+    font-size: 15px;
+    font-family:'Poppins','sans-serif';
+    background-color: #8b7e757a;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color:#1d19169d;
+    text-align: center;
+}
+
+a {
+    font-weight: 700;
+    transition: all 0.4s ease;
+}
+
+.navbar {
+    border-bottom: 0px solid rgba(0, 0, 0, 1);
+    background-color: rgba(255, 255, 255, 0.02);
+    backdrop-filter: blur(20px) saturate(160%) contrast(45%) brightness(140%);
+}
+
+.logo-text{
+    font-size: 50px;
+    text-transform: uppercase;
+    color:#000000 !important;
+}
+.navbar .nav-link {
+    font-size: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.navbar-light .navbar-nav .nav-link.active {
+    color: #c9b39f;
+}
+
+img{
+    width: 100%;
+}
+
+section{
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+#landingPage{
+    background: linear-gradient(to top, rgba(93, 106, 131, 0.445) 20%, rgba(241, 240, 240, 0.295) 86%), url(../../views/page/img/main_photo.jpg);
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+}
+
+.btn {
+    font-weight: 700;
+    font-size: 12px;
+    text-transform: uppercase;
+    padding: 12px 28px;
+    border-radius: 0;
+    font-family: var(--font-base), sans-serif;
+    font-size: 15px;
+    transition: all 0.4s ease;
+}
+
+
+.btn-brand {
+    background-color: #c9b39f;
+    color: #fff;
+}
+
+.btn-brand:hover{
+    background-color: #807468;
+    color: #fff;
+    cursor: pointer;
+}
