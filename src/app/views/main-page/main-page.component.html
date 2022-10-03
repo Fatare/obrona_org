@@ -1,109 +1,75 @@
-<body data-bs-spy="scroll" data-bs-target=".navbar">
-
-    <div class="header-wrapper">
-        <section class="main-header-section">
-            <div class="container main-header-content">
-                <a href="#" class="logo-text" alt="MY">MY</a>
-                <div class="search-box">
-                    <form method="get" class="input-search">
-                        <input class="input-area" type="text">
-                        <input type="search" value class="btn">
-                    </form>
-                </div>
-                <div class="main-header-rside">
-                    <ul class="main_bar_items_list">
-                        <li class="main_bar_items_list main_bar_items_listshow">
-                            <span class="link">
-                                <i class="fe fa-user">
-                                </i>
-                                <span class="items-list-text user-area-menu-text">Account</span>
-                            </span>
-                            <div class="listshow">
-                                <ul>
-                                    <li>
-                                        <a href="../views/auth/login/login.component.html">Login</a>
-                                    </li>
-                                    <li>
-                                        <a href="../views/auth/signup/signup.component.html">Sign Up</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-                    </ul>
-                    <div class="cart main_bar_items_list main_bar_items_listshow">
-                        <!-- <span class="link main_bar_items_list_cart_icon">
-                            <i class="fa fa-shopping-basket"></i>
-                        </span>
-                        <span class="main_bar_items_list_text">Basket</span>
-                        <span class="cart-amount-now main_CartAmountNow">0</span> -->
-                        <a href="/cart/">
-                            <div class="Cash">
-                                <span class="main_CartCashTotal main_cashFormat" data-price="0">0,00&nbsp;zł</span>
-                            </div>
-                            <div class="basket-wrapper">
-                                <i class="fa fa-shopping-basket"></i>
-                                <div class="counter">
-                                    <span class="main-cart-amount main_CartAmount">0</span>
-                                </div>
-                            </div>
-                            <div class="cart-text">Basket</div>
-                        </a>
-                        <div class="listshow listshow-cart">
-                            <ul class="products hidden">
-                                <li data-nosnippet class="prod-temp hidden" data-hash="{{:hash:}}" data-amount="{{:amount:}}">
-                                    <div class="container-fluid">
-                                        <div class="row">
-                                            <div class="col-xs-8">
-                                                <a href="#{{:url:}}" rel="nofollow">
-                                                    <span class="prod-name">{{:name:}}</span>
-                                                </a>
-                                            </div>
-                                            <span class="prod-all">
-                                                "{{:amount:}} x"
-                                                <strong class="main_cashFormat" data-price="{{:price:}}" data-tax="{{:tax:}}" data-price-type-placeholder>-,--&nbsp;</strong>
-                                            </span>
-                                        </div>
-                                        <div class="col-xs-1">
-                                            <i class="close-icon main_removeProdFromCart"></i>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li data-nosnippet class="prod-temp" data-amount="0"></li>
-                            </ul>
-                            <span class="cart-empty hidden"> Your casket is empty</span>
-                            <div class="actions">
-                                <div class="cart-sum">
-                                    <div class="summ-ele is-free-shipping hidden main_IsFreeShipping">
-                                        <span> Do bezpłatnej dostawy brakuje</span>
-                                        <span class="value main_cashFormat main_IsFreeShipping">-,--&nbsp;</span>
-                                    </div>
-                                    <div class="sum-ele main-cart-amount">
-                                        <span> Price</span>
-                                        <div class="value main_CartCashTotal free-shipping-wrapper hidden main_IsFreeShippingOn">
-                                            <span class="value-upper free-sipping-info">Free shipping!</span>
-                                        </div>
-                                        <div class="sum-ele main_cash-total-price">
-                                            <span>Summary</span>
-                                            <span class="value main_CartCashTotal main_cartFreeShipping main_cashFormat" data-free-shippingdata-free-shipping-type="brutto" data-price="0">-,--&nbsp;</span>
-                                        </div>
-                                    </div>
-                                    <a href="/cart/" class="btn btn-primary btn-block">Do shipping</a>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="menu-section">
-            <div class="container">
-                <section class="menu">
-                    <ul class="items-menu-list">
-                        <li class="up-down-menu"></li>
-                    </ul>
-                </section>
-            </div>
-        </section>
+<header>
+<nav class="navbar fixed-top navbar-expand-lg navbar-light navbar-transparent">
+    <div class="container">
+        <div class="menu_logo">
+            <a class=" navbar-brand logo-text" href="mainPage">MY</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        </div>
+        
+        <div class="menu_cart">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-heart"></i><span>1</span></a></li>
+                <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-shopping-basket"></i><span>4</span></a></li>
+                <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-search"></i></a></li>
+                <li class="nav-item"><input type="text" placeholder=" "><button type="submit" class="btn">Search</button></li>
+            </ul>
+        </div>
     </div>
-</body>
+</nav>
+</header>
+
+<section class="web container" id="shop">
+    <h2 class="section-name">Products</h2>
+    <div class="web-content">
+        <div class="row">
+        <div class="col-lg-4 col-sm-6">
+        <div class="product-area">
+            <img src="main_photo.jpg" alt="" class="product-img">
+            <div class="overlay ">
+                <p>Extreme Photo</p>
+                <h2>250 PLN</h2>
+                <div class="btn-group">
+                    <button class="btn-heart"><i class="fa fa-heart"></i></button>
+                    <button class="btn-basket"><i class="fa fa-shopping-basket"></i></button>
+                </div>
+              </div>
+        </div>
+    </div>
+
+
+
+    <div class="col-lg-4 col-sm-6">
+    <div class="product-area">
+        <img src="main_photo.jpg" alt="" class="product-img">
+        <div class="overlay">
+            <p>Extreme Photo</p>
+            <h2>250 PLN</h2>
+            <div class="btn-group">
+                <button class="btn-heart"><i class="fa fa-heart"></i></button>
+                <button class="btn-basket"><i class="fa fa-shopping-basket add-item"></i></button>
+            </div>
+          </div>
+    </div>
+</div>
+
+
+
+    <div class="col-lg-4 col-sm-6">
+    <div class="product-area">
+        <img src="main_photo.jpg" alt="" class="product-img">
+        <div class="overlay">
+            <p>Extreme Photo</p>
+            <h2>250 PLN</h2>
+            <div class="btn-group">
+                <button class="btn-heart"><i class="fa fa-heart"></i></button>
+                <button class="btn-basket"><i class="fa fa-shopping-basket add-item"></i></button>
+            </div>
+          </div>
+    </div>
+</div>
+</div>
+</div>
+</section>
