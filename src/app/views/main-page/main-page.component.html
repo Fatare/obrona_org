@@ -1,75 +1,77 @@
 <header>
-<nav class="navbar fixed-top navbar-expand-lg navbar-light navbar-transparent">
-    <div class="container">
-        <div class="menu_logo">
-            <a class=" navbar-brand logo-text" href="mainPage">MY</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light navbar-transparent">
+        <div class="container">
+            <div class="menu_logo">
+                <a class=" navbar-brand logo-text" href="mainPage">MY</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+
+            <div class="menu_cart">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-heart"></i><span>1</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i
+                                class="fa fa-shopping-basket"></i><span>4</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-search"></i></a></li>
+                    <li class="nav-item"><input type="text" placeholder=" "><button type="submit"
+                            class="btn">Search</button></li>
+                </ul>
+            </div>
         </div>
-        
-        <div class="menu_cart">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-heart"></i><span>1</span></a></li>
-                <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-shopping-basket"></i><span>4</span></a></li>
-                <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-search"></i></a></li>
-                <li class="nav-item"><input type="text" placeholder=" "><button type="submit" class="btn">Search</button></li>
-            </ul>
-        </div>
-    </div>
-</nav>
+    </nav>
 </header>
 
 <section class="web container" id="shop">
     <h2 class="section-name">Products</h2>
     <div class="web-content">
         <div class="row">
-        <div class="col-lg-4 col-sm-6">
-        <div class="product-area">
-            <img src="main_photo.jpg" alt="" class="product-img">
-            <div class="overlay ">
-                <p>Extreme Photo</p>
-                <h2>250 PLN</h2>
-                <div class="btn-group">
-                    <button class="btn-heart"><i class="fa fa-heart"></i></button>
-                    <button class="btn-basket"><i class="fa fa-shopping-basket"></i></button>
+            <div *ngFor="let product of products" class="col-lg-4 col-sm-6">
+                <div class="product-area">
+                    <img src="main_photo.jpg" alt="" class="product-img">
+                    <div class="overlay ">
+                        <p>{{product.name}} {{product.brand}}</p>
+                        <h2>{{product.price}} PLN</h2>
+                        <div class="btn-group">
+                            <button class="btn-heart"><i class="fa fa-heart"></i></button>
+                            <button class="btn-basket"><i class="fa fa-shopping-basket"></i></button>
+                        </div>
+                    </div>
                 </div>
-              </div>
+            </div>
+
+
+
+            <!-- <div class="col-lg-4 col-sm-6">
+                <div class="product-area">
+                    <img src="main_photo.jpg" alt="" class="product-img">
+                    <div class="overlay">
+                        <p>Extreme Photo</p>
+                        <h2>250 PLN</h2>
+                        <div class="btn-group">
+                            <button class="btn-heart"><i class="fa fa-heart"></i></button>
+                            <button class="btn-basket"><i class="fa fa-shopping-basket add-item"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="col-lg-4 col-sm-6">
+                <div class="product-area">
+                    <img src="main_photo.jpg" alt="" class="product-img">
+                    <div class="overlay">
+                        <p>Extreme Photo</p>
+                        <h2>250 PLN</h2>
+                        <div class="btn-group">
+                            <button class="btn-heart"><i class="fa fa-heart"></i></button>
+                            <button class="btn-basket"><i class="fa fa-shopping-basket add-item"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
         </div>
     </div>
-
-
-
-    <div class="col-lg-4 col-sm-6">
-    <div class="product-area">
-        <img src="main_photo.jpg" alt="" class="product-img">
-        <div class="overlay">
-            <p>Extreme Photo</p>
-            <h2>250 PLN</h2>
-            <div class="btn-group">
-                <button class="btn-heart"><i class="fa fa-heart"></i></button>
-                <button class="btn-basket"><i class="fa fa-shopping-basket add-item"></i></button>
-            </div>
-          </div>
-    </div>
-</div>
-
-
-
-    <div class="col-lg-4 col-sm-6">
-    <div class="product-area">
-        <img src="main_photo.jpg" alt="" class="product-img">
-        <div class="overlay">
-            <p>Extreme Photo</p>
-            <h2>250 PLN</h2>
-            <div class="btn-group">
-                <button class="btn-heart"><i class="fa fa-heart"></i></button>
-                <button class="btn-basket"><i class="fa fa-shopping-basket add-item"></i></button>
-            </div>
-          </div>
-    </div>
-</div>
-</div>
-</div>
 </section>
