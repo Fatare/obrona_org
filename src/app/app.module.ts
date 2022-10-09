@@ -7,8 +7,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './views/auth/login/login.component';
 import { SignupComponent } from './views/auth/signup/signup.component';
-import { PageComponent } from './views/page/page.component';
 import { MainPageComponent } from './views/main-page/main-page.component';
+import { ShopCartComponent } from './views/shop-cart/shop-cart.component';
 
 
 @NgModule({
@@ -16,8 +16,8 @@ import { MainPageComponent } from './views/main-page/main-page.component';
     AppComponent,
     LoginComponent,
     SignupComponent,
-    PageComponent,
     MainPageComponent,
+    ShopCartComponent,
     
   ],
   imports: [

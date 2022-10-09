@@ -17,7 +17,7 @@ img{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px 0;
+    /* padding: 10px 0; */
 }
 
 .logo-text{
@@ -34,10 +34,60 @@ img{
 }
 
 .navbar .nav-link {
-    font-size: 16px;
+    font-size: 22px;
+    font-weight: 400;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
+.navbar-light .navbar-nav .nav-link.active {
+    color: #c9b39f;
+}
+
+
+   /* HOME - MAIN */
+#home{
+    background: linear-gradient(to top, rgba(93, 106, 131, 0.445) 20%, rgba(241, 240, 240, 0.295) 86%), url(main_photo.jpg);
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+}
+
+#home h1{
+    font-weight: 700;
+    font-size: 100px;
+}
+
+#home p{
+    max-width: 550px;
+    margin: 18px auto;
+    font-size: 20px;
+}
+
+.btn {
+    font-weight: 700;
+    font-size: 12px;
+    text-transform: uppercase;
+    padding: 12px 28px;
+    border-radius: 0;
+    font-family: var(--font-base), sans-serif;
+    font-size: 15px;
+    transition: all 0.4s ease;
+}
+
+.btn-brand {
+    background-color: #c9b39f;
+    color: #fff;
+}
+
+.btn-brand:hover{
+    background-color: #807468;
+    color: #fff;
+    cursor: pointer;
+}
+
 
 section{
     padding-top: 100px;
@@ -128,6 +178,143 @@ margin-top: 2rem;
     transform: scale(1.1);
 }
 
+/* CONTACT */
+
+#map {
+    height: 100%;
+    min-height: 500px;
+    width: 100%;
+}
+
+.form-group {
+    margin-bottom: 24px;
+}
+
+.form-group,
+label,
+.form-control {
+    width: 100%;
+    display: block;
+    color: rgb(85, 68, 58);
+    font-size: 20px;
+}
+
+.form-control{
+    border: 1px solid #8b7e757a;
+    background-color: #8b7e757a;
+    color: white; 
+    border-radius: 0;  
+    padding: 15px; 
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+}
+
+.form-control:focus{
+    outline: 0;
+    border-color: #8b7e757a;
+}
+
+.form-control::placeholder {
+    color: white;
+}
+
+input.form-control {
+    height: 45px;
+}
+
+.two-col-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 70px;
+
+}
+
+/* COOPERATION SECTION */
+#cooperation p{
+    color: white;
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+    padding: 15px;
+
+}
+
+#cooperation h4{
+    font-size: 25px;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+/* CALL TO ACTION/ JUMBOTRON SECTION */
+#calltoaction {
+    background-color: #8b7e757a;
+}
+
+
+/* FOOTER */
+
+.footer-top {
+    padding-top: 80px;
+    padding-bottom: 30px;
+}
+
+.footer-bottom {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1) ;
+}
+
+footer .footer-links a {
+    color: #898fa1;
+    display:block;
+    font-weight: 400;
+    font-size: 17px;
+}
+
+footer .footer-links a:hover {
+    color: #302b26;
+}
+
+.mb {
+    color: #1d19169d;
+    font-size: 17px;
+}
+
+footer p{
+    font-size: 17px;
+    text-align: left;  
+}
+
+.title-sm {
+    font-size: 17px;
+    text-align: left;
+}
+
+footer .logo-text {
+    text-align: left;
+}
+
+
+.fa {
+    padding: 12px;
+    margin: 14px;
+  }
+
+.social-icons-1 a {
+    color: #898fa1;
+    transition: all 0.4s ease;
+    font-size: 28px;
+}
+.social-icons-1 a:hover {
+    color: #302b26;
+}
+
+
+
+.jumbotron {
+    background-color: transparent;
+    margin-top: 50px;
+}
 
 .btn-heart{
     background-color: transparent;

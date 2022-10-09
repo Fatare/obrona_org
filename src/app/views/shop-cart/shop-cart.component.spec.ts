@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PageComponent } from './page.component';
+import { ShopCartComponent } from './shop-cart.component';
 
-describe('PageComponent', () => {
-  let component: PageComponent;
-  let fixture: ComponentFixture<PageComponent>;
+describe('ShopCartComponent', () => {
+  let component: ShopCartComponent;
+  let fixture: ComponentFixture<ShopCartComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ PageComponent ]
+      declarations: [ ShopCartComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(PageComponent);
+    fixture = TestBed.createComponent(ShopCartComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
