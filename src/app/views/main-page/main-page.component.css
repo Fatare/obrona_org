@@ -116,6 +116,13 @@ section{
 .web {
 margin-top: 2rem;
 }
+/*SIDEBAR*/
+.sidebar {
+    margin-left: 2.5rem;
+  margin-right: 2.5rem;
+  width: 100px;
+}
+
 
 /* WEB PART */
 
@@ -315,6 +322,40 @@ footer .logo-text {
     background-color: transparent;
     margin-top: 50px;
 }
+
+/* SHOP CART */
+
+.undertext {
+    font-size: 14px;
+    line-height: .8;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .7px;
+    position: relative;
+    z-index: 2;
+}
+
+.undertext a {
+    color: #8e8d8d;
+}
+
+/*------- ALL PRODUCTS -----------*/
+
+.row-2{
+    justify-content: space-between;
+    margin: 100px auto 50px;
+}
+
+select{
+    border: 1px solid #ff523b;
+    padding: 5px;
+}
+
+select:focus{
+    outline: none;
+}
+
+
 
 .btn-heart{
     background-color: transparent;

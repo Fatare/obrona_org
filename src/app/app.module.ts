@@ -9,6 +9,7 @@ import { LoginComponent } from './views/auth/login/login.component';
 import { SignupComponent } from './views/auth/signup/signup.component';
 import { MainPageComponent } from './views/main-page/main-page.component';
 import { ShopCartComponent } from './views/shop-cart/shop-cart.component';
+import { ProductCartComponent } from './views/product-cart/product-cart.component';
 
 
 @NgModule({
@@ -18,6 +19,7 @@ import { ShopCartComponent } from './views/shop-cart/shop-cart.component';
     SignupComponent,
     MainPageComponent,
     ShopCartComponent,
+    ProductCartComponent,
     
   ],
   imports: [

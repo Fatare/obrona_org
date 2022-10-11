@@ -32,8 +32,32 @@
     </nav>
 </header>
 
+<!-- BANNER -->
+<section class="shop-banner">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="banner-title">Products</h2>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--SELECT OPTION -->
+
+<div class="row row-2">
+    <select name="Sort" id="sort">
+        <option>Default Sorting</option>
+        <option>Sort by Price</option>
+        <option>Sort by Sale</option>
+        <option>Sort by Rating</option>
+    </select>
+</div>
+
+
 <section class="web container" id="shop">
-    <h2 class="section-name">Products</h2>
+  
+    
     <div class="web-content">
         <div class="row">
             <div *ngFor="let product of products" class="col-lg-4 col-sm-6">
@@ -120,6 +144,12 @@
                 </div>
             </div>
 
+<div class="page-btn">
+    <span>1</span>
+    <span>2</span>
+    <span>3</span>
+    <span>&#8594;</span>
+</div>
 
 
             <!-- <div class="col-lg-4 col-sm-6">
