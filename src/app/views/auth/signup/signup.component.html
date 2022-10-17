@@ -3,15 +3,15 @@
         <div class="form-content">
             <header>Sign Up</header>
 
-            <form #myForm="ngForm" [formGroup]="form" (ngSubmit)="onSubmit()" action="#">
-                <div class="field input-field">
-                    <input type="email" formControlName="email" placeholder="Email" class="input" required>
-                </div>
+            <form #myForm="ngForm" [formGroup]="signupForm" (ngSubmit)="signUpUser()" action="#">
                 <div class="field input-field">
                     <input type="name" formControlName="name" placeholder="Name" class="input" required>
                 </div>
                 <div class="field input-field">
                     <input type="surname" formControlName="surname" placeholder="Surname" class="input" required>
+                </div>
+                <div class="field input-field">
+                    <input type="email" formControlName="email" placeholder="Email" class="input" required>
                 </div>
                 
                     <div class="field input-field">
@@ -27,7 +27,7 @@
                         </i>
                     </div>
                     <div class="field btn-field">
-                        <button type="signup" [disabled]="!myForm.valid" >SIGN UP</button>
+                        <button type="submit" [disabled]="!myForm.valid" >SIGN UP</button>
                     </div>
                     <div class="form-link">
                         <span>Have already an account? <a routerLink="../Login" class="link login-link">Log In</a></span>

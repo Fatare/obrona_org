@@ -4,7 +4,7 @@
         <div class="form-content">
             <header>Login</header>
 
-            <form #myForm="ngForm" [formGroup]="form" (ngSubmit)="onSubmit()" action="#">
+            <form #myForm="ngForm" [formGroup]="logInForm" (ngSubmit)="logInUser()" action="#">
                 <div class="field input-field">
                     <input type="email" formControlName="email" placeholder="Email" class="input">
                 </div>
@@ -12,7 +12,7 @@
                 <div class="field input-field">
                     <input [type]="isClicked == false ? 'text' : 'password' "
                            formControlName="password"
-                           laceholder="Password" 
+                           placeholder="Password" 
                            class="password"> 
 
                     <i class="eye-icon fas"
@@ -35,7 +35,7 @@
                 </div>
 
                 <div class="field btn-field">
-                    <button [disabled]="!myForm.valid" >LOGIN</button>
+                    <button type="submit" [disabled]="!myForm.valid" >LOGIN</button>
                 </div>
 
                 <div class="form-link">

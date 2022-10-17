@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from 'src/app/services/user.service';
 import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
+import { AuthService } from 'src/app/_services/auth.service';
+import { Router } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-signup',
@@ -9,30 +12,89 @@ import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms'
 })
 export class SignupComponent implements OnInit {
 
-  user = {
-    email: 'a@a.com',
-    password: 'aaa',
-    name: 'aaa',
-    surname: 'a'
-  };
 
-  form = new FormGroup({
-    "email": new FormControl("", Validators.required),
-    "name": new FormControl("", Validators.required),
-    "surname": new FormControl("", Validators.required),
-    "password": new FormControl("", Validators.required),
-  });
+  signupForm:FormGroup;
 
-  onSubmit() {
-    console.log("reactive forn subitted");
-    console.log(this.form);
+  constructor(private formBuilder:FormBuilder, private authService: AuthService, private router: Router) { 
+    this.signupForm = this.formBuilder.group({
+      name: ['', Validators.required],
+      surname: ['', Validators.required],
+      email: ['', Validators.required],
+      password: ['', Validators.required],
+    }); 
   }
+  
 
-  public isClicked: boolean = true;
-  constructor(private _auth: UserService) { }
+  ngOnInit() {}
+  
+  signUpUser() {
 
-  ngOnInit(): void {
+    const val = this.signupForm.value;
+
+    if(val.name && val.surname && val.email && val.password){
+      this.authService.signup(val.name, val.surname, val.email, val.password).subscribe(
+        () => {
+          this.router.navigateByUrl('Login');
+        }
+      )
+    }
   }
+ 
+ 
+  // user = {
+  //   email: 'a@a.com',
+  //   password: 'aaa',
+  //   name: 'aaa',
+  //   surname: 'a'
+  // };
+
+  // form: any = { 
+  //   name: null,
+  //   surname: null,
+  //   email: null,
+  //   password: null,
+  // };
+
+  // isSuccessful = false;
+  // isSignUpFailed = false;
+
+  // form = new FormGroup({
+  //   name: new FormControl("", Validators.required),
+  //   surname: new FormControl("", Validators.required),
+  //   email: new FormControl("", Validators.required),
+  //   password: new FormControl("", Validators.required),
+  // });
+
+
+  // onSubmit() {
+  //   console.log("reactive form subitted");
+  //   console.log(this.form);
+  // }
+
+  // onSubmit(): void {
+  //   const { name, surname, email, password } = this.form;
+
+  //   this.authService.register(name, surname, email, password).subscribe({
+  //     next: data => {
+  //       console.log(data);
+  //       this.isSuccessful = true;
+  //       this.isSignUpFailed = false;
+  //     },
+  //     // error: err => {
+  //     //   this.errorMessage = err.error.message;
+  //     //   this.isSignUpFailed = true;
+  //     // }
+  //   });
+  // }
+
+  
+
+  public isClicked: boolean = true;  
+
+  // constructor(private authService: AuthService) {}
+
+  // ngOnInit(): void {
+  // }
 
   // signupUser(){
   //   this._auth.signupUser(this.signupUserData)

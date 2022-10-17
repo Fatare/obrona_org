@@ -11,6 +11,8 @@ import { MainPageComponent } from './views/main-page/main-page.component';
 import { ShopCartComponent } from './views/shop-cart/shop-cart.component';
 import { ProductCartComponent } from './views/product-cart/product-cart.component';
 
+import { httpInterceptorProviders } from './_helpers/http.interceptor';
+
 
 @NgModule({
   declarations: [
@@ -29,7 +31,7 @@ import { ProductCartComponent } from './views/product-cart/product-cart.componen
     AppRoutingModule,
     ReactiveFormsModule,
   ],
-  providers: [],
+  providers: [httpInterceptorProviders],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
