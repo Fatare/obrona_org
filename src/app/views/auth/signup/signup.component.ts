@@ -23,21 +23,27 @@ export class SignupComponent implements OnInit {
       password: ['', Validators.required],
     }); 
   }
+
+  isSuccessful = false;
+  isSignUpFailed = false;
   
 
   ngOnInit() {}
   
   signUpUser() {
+    console.log("reactive form subitted");
 
     const val = this.signupForm.value;
 
-    if(val.name && val.surname && val.email && val.password){
+    // if(val.name && val.surname && val.email && val.password){
       this.authService.signup(val.name, val.surname, val.email, val.password).subscribe(
         () => {
-          this.router.navigateByUrl('Login');
+          // this.router.navigateByUrl('Login');
+          this.isSuccessful = true;
+        this.isSignUpFailed = false;
         }
       )
-    }
+    // }
   }
  
  

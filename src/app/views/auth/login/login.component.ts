@@ -62,7 +62,7 @@ password: ['',Validators.required]
       this.authService.login(val.email, val.password).subscribe (
         () => {
           console.log("User is logged in now");
-          this.router.navigateByUrl('/');
+          this.router.navigateByUrl('mainPage');
         }
       )
     }
