@@ -1,0 +1,63 @@
+.footer-top {
+    padding-top: 80px;
+    padding-bottom: 30px;
+}
+
+.footer-bottom {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1) ;
+}
+
+footer .footer-links a {
+    color: #898fa1;
+    display:block;
+    font-weight: 400;
+    font-size: 17px;
+}
+
+footer .footer-links a:hover {
+    color: #302b26;
+}
+
+.mb {
+    color: #1d19169d;
+    font-size: 17px;
+}
+
+footer p{
+    font-size: 17px;
+    text-align: left;  
+}
+
+.title-sm {
+    font-size: 17px;
+    text-align: left;
+}
+
+footer .logo-text {
+    text-align: left;
+}
+
+
+.fa {
+    padding: 12px;
+    margin: 14px;
+  }
+
+.social-icons-1 a {
+    color: #898fa1;
+    transition: all 0.4s ease;
+    font-size: 28px;
+}
+.social-icons-1 a:hover {
+    color: #302b26;
+}
+
+
+
+.jumbotron {
+    background-color: transparent;
+    margin-top: 50px;
+}
+

@@ -1,36 +1,4 @@
-<header>
-    <nav class="navbar fixed-top navbar-expand-lg navbar-light navbar-transparent pt-1 pb-1">
-                <a class=" navbar-brand logo-text" href="mainPage">MY</a>
 
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainmenu"
-                    aria-controls="mainmenu" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-            
-
-            <div class=" collapse navbar-collapse menu_cart" id="mainmenu">
-
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="mainPage">Home</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="shopCart">Shop</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="#reviews">Contact</a>
-                      </li>
-                    <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-heart"></i><span> 1</span></a></li>
-                    <li class="nav-item"><a class="nav-link" href="#"><i
-                                class="fa fa-shopping-basket"></i><span> 4</span></a></li>
-                    <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-search"></i></a></li>
-                    <li class="nav-item"><input type="text" placeholder=" "><button type="submit"
-                            class="btn">Search</button></li>
-                </ul>
-            </div>
-        
-    </nav>
-</header>
 
  <!--FIRST LOOK-->
  <section id="home">
@@ -55,85 +23,15 @@
     <h2 class="section-name">Products</h2>
     <div class="web-content">
         <div class="row">
-            <div *ngFor="let product of products" class="col-lg-4 col-sm-6">
+            <div *ngFor="let item of productList" class="col-lg-4 col-sm-6">
                 <div class="product-area">
-                    <img src="main_photo.jpg" alt="" class="product-img">
+                    <img src="{{item.image}}" alt="" class="product-img">
                     <div class="overlay ">
-                        <p>{{product.name}} {{product.brand}}</p>
-                        <h2>{{product.price}} PLN</h2>
+                        <p>{{item.title}} {{item.category}}</p>
+                        <h2>{{item.price}} $</h2>
                         <div class="btn-group">
                             <button class="btn-heart"><i class="fa fa-heart"></i></button>
-                            <button class="btn-basket"><i class="fa fa-shopping-basket"></i></button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div *ngFor="let product of products" class="col-lg-4 col-sm-6">
-                <div class="product-area">
-                    <img src="main_photo.jpg" alt="" class="product-img">
-                    <div class="overlay">
-                        <p>{{product.name}} {{product.brand}}</p>
-                        <h2>{{product.price}} PLN</h2>
-                        <div class="btn-group">
-                            <button class="btn-heart"><i class="fa fa-heart"></i></button>
-                            <button class="btn-basket"><i class="fa fa-shopping-basket"></i></button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div *ngFor="let product of products" class="col-lg-4 col-sm-6">
-                <div class="product-area">
-                    <img src="main_photo.jpg" alt="" class="product-img">
-                    <div class="overlay ">
-                        <p>{{product.name}} {{product.brand}}</p>
-                        <h2>{{product.price}} PLN</h2>
-                        <div class="btn-group">
-                            <button class="btn-heart"><i class="fa fa-heart"></i></button>
-                            <button class="btn-basket"><i class="fa fa-shopping-basket"></i></button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div *ngFor="let product of products" class="col-lg-4 col-sm-6">
-                <div class="product-area">
-                    <img src="main_photo.jpg" alt="" class="product-img">
-                    <div class="overlay ">
-                        <p>{{product.name}} {{product.brand}}</p>
-                        <h2>{{product.price}} PLN</h2>
-                        <div class="btn-group">
-                            <button class="btn-heart"><i class="fa fa-heart"></i></button>
-                            <button class="btn-basket"><i class="fa fa-shopping-basket"></i></button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div *ngFor="let product of products" class="col-lg-4 col-sm-6">
-                <div class="product-area">
-                    <img src="main_photo.jpg" alt="" class="product-img">
-                    <div class="overlay ">
-                        <p>{{product.name}} {{product.brand}}</p>
-                        <h2>{{product.price}} PLN</h2>
-                        <div class="btn-group">
-                            <button class="btn-heart"><i class="fa fa-heart"></i></button>
-                            <button class="btn-basket"><i class="fa fa-shopping-basket"></i></button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div *ngFor="let product of products" class="col-lg-4 col-sm-6">
-                <div class="product-area">
-                    <img src="main_photo.jpg" alt="" class="product-img">
-                    <div class="overlay ">
-                        <p>{{product.name}} {{product.brand}}</p>
-                        <h2>{{product.price}} PLN</h2>
-                        <div class="btn-group">
-                            <button class="btn-heart"><i class="fa fa-heart"></i></button>
-                            <button class="btn-basket"><i class="fa fa-shopping-basket"></i></button>
+                            <button class="btn-basket" (click)="addtoCart(item)"><i class="fa fa-shopping-basket"></i></button>
                         </div>
                     </div>
                 </div>
@@ -145,7 +43,7 @@
 <!--CONTACT-->
 <section id="contact">
     <div class="container">
-      <h1 data-aos="zoom-in-down">Find us & contact us</h1>
+      <h1 class="section-name" data-aos="zoom-in-down">Find us & contact us</h1>
       <div class="hline"></div>
         <div class="two-col-grid">
           <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m27!1m12!1m3!1d6995.093477248252!2d17.425763699803213!3d51.69390109153277!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m12!3e2!4m5!1s0x4705465425bb1be3%3A0xe0b2ae72f6e644d4!2sPiastowska%2023%2C%2063-700%20Krotoszyn%2C%20Poland!3m2!1d51.6946519!2d17.4362002!4m4!1s0x4705465425bb1be3%3A0xe0b2ae72f6e644d4!3m2!1d51.6946519!2d17.4362002!5e0!3m2!1sen!2s!4v1651248543114!5m2!1sen!2s" frameborder=”0″ style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -186,55 +84,4 @@
         </div>
       </section>
  
-  <!--FOOTER-->
-
-  <footer>
-    <div class="footer-top">
-      <div class="container">
-        <div class="row ">
-          <div class="col-md-5">
-            <h4 class="logo-text text-center">MY</h4>
-            <p  class="text-white text-center" > Find us!</p>
-            <div class="social-icons-1 text-center">
-              <a href="https://www.facebook.com/" class="fa fa-facebook"></a>
-              <a href="https://www.youtube.com/" class="fa fa-youtube"></a>
-            </div>
-          </div>
-          <div class="col-md-2">
-            <h5 class="title-sm">Navigation</h5>
-            <div class="footer-links">
-              <a href="#">Services</a>
-              <a href="#">Our work</a>
-              <a href="#">Our team</a>
-              <a href="#">Blog</a>
-            </div>
-          </div>
-          <div class="col-md-2">
-            <h5 class="title-sm">More</h5>
-            <div class="footer-links">
-              <a href="#">FAQ's</a>
-              <a href="#">Privacy & Policy</a>
-              <a href="#">Licences</a>
-            </div>
-          </div>
-          <div class="col-md-2">
-            <h5 class="title-sm">Contact</h5>
-            <div class="footer-links">
-              <p class="mb">ul. Piastowska 23, 63-700 Krotoszyn</p>
-              <p class="mb">tel. 883 074 274</p>
-              <p class="mb">MY@gmail.com</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6">
-            <p class="mb-0">Zuzanna Jagodzińska & Mateusz Grześkowiak & Konrad Dzięcioł & Mateusz Goździak 2022</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer>
+ 

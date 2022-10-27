@@ -10,6 +10,9 @@ import { SignupComponent } from './views/auth/signup/signup.component';
 import { MainPageComponent } from './views/main-page/main-page.component';
 import { ShopCartComponent } from './views/shop-cart/shop-cart.component';
 import { ProductCartComponent } from './views/product-cart/product-cart.component';
+import { CartComponent } from './views/cart/cart.component';
+import { HeaderComponent } from './views/header/header.component';
+import { FooterComponent } from './views/footer/footer.component';
 
 
 @NgModule({
@@ -20,6 +23,9 @@ import { ProductCartComponent } from './views/product-cart/product-cart.componen
     MainPageComponent,
     ShopCartComponent,
     ProductCartComponent,
+    CartComponent,
+    HeaderComponent,
+    FooterComponent,
     
   ],
   imports: [

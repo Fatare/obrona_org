@@ -1,61 +1,57 @@
-img{
-    width: 25%;
-    height: 25%;
+
+header{
+    z-index: 100;
 }
 
+.container {
+    max-width: 1100px;
+    margin: auto;
+    width: 100%;
+}
 
-   /* HOME - MAIN */
-#home{
-    background: linear-gradient(to top, rgba(93, 106, 131, 0.445) 20%, rgba(241, 240, 240, 0.295) 86%), url(main_photo.jpg);
-    min-height: 100vh;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+img{
+    width: 100%;
+}
+
+.nav {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    /* padding: 10px 0; */
 }
 
-#home h1{
-    font-weight: 700;
-    font-size: 100px;
-}
-
-#home p{
-    max-width: 550px;
-    margin: 18px auto;
-    font-size: 20px;
-}
-
-.btn {
-    font-weight: 700;
-    font-size: 12px;
-    text-transform: uppercase;
-    padding: 12px 28px;
-    border-radius: 0;
-    font-family: var(--font-base), sans-serif;
-    font-size: 15px;
-    transition: all 0.4s ease;
-}
-
-section{
-    padding-top: 100px;
-    padding-bottom: 100px;
-    
-}
-
-.btn-brand {
-    background-color: #c9b39f;
-    color: #fff;
-}
-
-
-
-.section-name{
-    font-size: 1.5rem;
+.logo-text{
+    font-size: 60px;
     font-weight: 600;
-    text-align: center;
-    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    color:#000000 !important;
 }
+
+.navbar {
+    border-bottom: 0px solid rgba(0, 0, 0, 1);
+    background-color: rgba(255, 255, 255, 0.02);
+    backdrop-filter: blur(20px) saturate(160%) contrast(45%) brightness(140%);
+}
+
+.navbar .nav-link {
+    font-size: 22px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.navbar-light .navbar-nav .nav-link.active {
+    color: #c9b39f;
+}
+
+
+   
+/*SIDEBAR*/
+.sidebar {
+    margin-left: 2.5rem;
+  margin-right: 2.5rem;
+  width: 100px;
+}
+
 
 /* WEB PART */
 
@@ -170,41 +166,3 @@ input.form-control {
 
 }
 
-
-
-/* CALL TO ACTION/ JUMBOTRON SECTION */
-#calltoaction {
-    background-color: #8b7e757a;
-}
-
-
-
-
-
-.btn-heart{
-    background-color: transparent;
-    color: #fff;
-    border: none;
-    
-}
-
-.btn-heart:hover{
-    background-color: transparent;
-    border: none;
-    color: #d6bde4;
-    cursor: pointer;
-}
-
-.btn-basket{
-    background-color: transparent;
-    color: #fff;
-    border: none;
-    
-}
-
-.btn-basket:hover{
-    background-color: transparent;
-    border: none;
-    color: #d6bde4;
-    cursor: pointer;
-}
